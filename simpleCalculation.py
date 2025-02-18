@@ -5,4 +5,4 @@ def hitungUmur(tahunSekarang, tahunLahir):
     umur = tahunSekarang - int(tahunLahir)
     print(umur)
 
-hitungUmur(tahunSekarang, tahunLahird)
+hitungUmur(tahunSekarang, tahunLahir)

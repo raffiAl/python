@@ -40,3 +40,23 @@ def ubah_nilai(a, b):
   print(buah, harga)
   
 ubah_nilai("jeruk", 20000)
+
+def rata_rata(*args):
+  list_data = []
+  for data in args:
+    list_data.append(data)
+
+  total = sum(list_data[:3])
+  rata_rata = total / 3
+
+  return rata_rata
+
+print(rata_rata(12, 13, 14))
+
+def luas_keliling_segitiga(sa, sb, sc, alas, tinggi):
+   luas = 1/2 * alas * tinggi
+   keliling = sa + sb +sc
+
+   print(f"luas = {luas} dan keliling = {keliling}")
+
+luas_keliling_segitiga(4, 5, 6, 10, 15)
