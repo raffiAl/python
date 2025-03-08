@@ -102,7 +102,9 @@ if (inggris < 70):
 #       print(f'Pelajaran dengan nilai sempurna: {nilai_100} ✅')
 #    else:
 #       print(f'Pelajaran dengan nilai sempurna: {nilai_100} ❌')
+#    CODE SEBELUM DI OPTIMASI
 
+#    CODE SETELAH DI OPTIMASI
 def checkKelulusan(rata_rata, nilai_70, nilai_100):
    status = 'LULUS'if rata_rata >= 75 and nilai_70 <= 1 and nilai_100 >= 1 else 'TIDAK LULUS'
 
