@@ -2,9 +2,9 @@
 
 tahun = int(input('masukan tahun: '))
 if (tahun % 4 == 0):
-    print('tahun %i merupakan tahun %s' %(tahun, 'kabisat'))
+   print('tahun %i merupakan tahun %s' %(tahun, 'kabisat'))
 else:
-  print('tahun %i bukan tahun %s' %(tahun, 'kabisat'))
+    print('tahun %i bukan tahun %s' %(tahun, 'kabisat'))
 
 angka = int(input('masukan angka: '))
 if (angka == 0):
@@ -114,3 +114,4 @@ def checkKelulusan(rata_rata, nilai_70, nilai_100):
    print(f'Pelajaran dengan nilai < 70: {nilai_70} {'✅' if nilai_70 <= 1 else '❌'}')
    print(f'Pelajaran dengan nilai sempurna: {nilai_100} {'✅' if nilai_100 >= 1 else '❌'}')
 checkKelulusan(rata_rata, nilai_70, nilai_100)
+ 
