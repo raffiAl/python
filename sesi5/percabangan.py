@@ -20,24 +20,24 @@
 
 # HITUNG PAJAK 
 
-njkb = int(input('masukan nilai jual kendaraan bermotor (NJKB): '))
-jenis_kendaraan  = input('masukan jenis kendaraan mobil/motor: ')
-kepemilikan_kendaraan = []
-pkb = 0
-motor = 35000
-mobil = 143000
+# njkb = int(input('masukan nilai jual kendaraan bermotor (NJKB): '))
+# jenis_kendaraan  = input('masukan jenis kendaraan mobil/motor: ')
+# kepemilikan_kendaraan = []
+# pkb = 0
+# motor = 35000
+# mobil = 143000
 
-def hitung_pajak(count, njkb) :
-  state = 2
+# def hitung_pajak(count, njkb) :
+#   state = 2
 
-  for i in range(count) :
-    kepemilikan_kendaraan.append(state)
-    state += 0.5
+#   for i in range(count) :
+#     kepemilikan_kendaraan.append(state)
+#     state += 0.5
   
-  for i in (kepemilikan_kendaraan) :
-    pkb = njkb - (njkb * (i/len(kepemilikan_kendaraan)))
-    pkb += motor if jenis_kendaraan == 'motor' else mobil
-    return pkb
+#   for i in (kepemilikan_kendaraan) :
+#     pkb = njkb - (njkb * (i/len(kepemilikan_kendaraan)))
+#     pkb += motor if jenis_kendaraan == 'motor' else mobil
+#     return pkb
 
-print(hitung_pajak(5, njkb))
+# print(hitung_pajak(5, njkb))
 
