@@ -116,3 +116,36 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+while True:
+    opr = ['*', '/', '+', '-', 'exit']
+    print('menu oprasi')
+    for i, op in enumerate(opr, 1):
+        print(i, op)
+    print(' ')
+    opr = input('masukan operator: ').lower().strip()
+    if opr == '5':
+        break
+    num1 = int(input('masukan angka:'))
+    num2 = int(input('masukan angka: '))
+
+    def calculator (opr, num1, num2) :
+        if(opr == '2'):
+            if(num2 != 0):
+                return num1/num2
+            else:
+                return 'Pembagian dengan 0 tidak di perbolehkan!'
+        elif(opr == '3'):
+            return num1+num2
+        elif(opr == '4'):
+            return num1-num2
+        elif(opr == '1'):
+            return num1*num2
+    
+    print(' ')
+    print('result')
+    print(calculator(opr, num1, num2))
+    print(' ')
+   
+
