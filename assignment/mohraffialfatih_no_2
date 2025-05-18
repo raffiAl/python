@@ -1,0 +1,42 @@
+mahasiswa = {}
+
+while True:
+    print("\nMenu:")
+    print("1. Tambah data mahasiswa")
+    print("2. Tampilkan semua data")
+    print("3. Cari berdasarkan NIM")
+    print("4. Hapus berdasarkan NIM")
+    print("5. Keluar")
+    pilihan = input("Pilih menu (1-5): ")
+
+    if pilihan == '1':
+        nim = input("Masukkan NIM: ")
+        nama = input("Masukkan Nama: ")
+        jurusan = input("Masukkan Jurusan: ")
+        ipk = float(input("Masukkan IPK: "))
+        mahasiswa[nim] = {"Nama": nama, "Jurusan": jurusan, "IPK": ipk}
+    elif pilihan == '2':
+        if mahasiswa:
+            for nim, data in mahasiswa.items():
+                print(f"NIM: {nim}, Nama: {data['Nama']}, Jurusan: {data['Jurusan']}, IPK: {data['IPK']}")
+        else:
+            print("Belum ada data.")
+    elif pilihan == '3':
+        cari = input("Masukkan NIM: ")
+        if cari in mahasiswa:
+            data = mahasiswa[cari]
+            print(f"Nama: {data['Nama']}, Jurusan: {data['Jurusan']}, IPK: {data['IPK']}")
+        else:
+            print("Data tidak ditemukan.")
+    elif pilihan == '4':
+        hapus = input("Masukkan NIM yang ingin dihapus: ")
+        if hapus in mahasiswa:
+            del mahasiswa[hapus]
+            print("Data dihapus.")
+        else:
+            print("Data tidak ditemukan.")
+    elif pilihan == '5':
+        print("Program selesai.")
+        break
+    else:
+        print("Pilihan tidak valid.")
