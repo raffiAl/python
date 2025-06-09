@@ -44,3 +44,25 @@ def comparison_of_education_and_gender(file_path):
   # show bar 
   plt.tight_layout()
   plt.show()
+
+# fungsi untuk mengkategorikan penghasilan
+def kategorikan_penghasilan(df):
+  # Mengkategorikan penghasilan ke dalam rentang tertentu
+  bins = [0, 1000000 , 3000000, 10000000, float('inf')]
+  labels = ['Rendah', 'Sedang', 'Tinggi', 'Sangat Tinggi']
+  df['Kategori_Penghasilan'] = pd.cut(df['Penghasilan_Per_Bulan'], bins=bins, labels=labels, right=True)
+
+def distribusi_penghasilan(file_path):
+  # Membaca data dan mengelempokan data berdasarkan penghasilan
+  df = pd.read_excel(file_path, sheet_name='Sheet1')
+  kategorikan_penghasilan(df)
+  groupedData = df.groupby('Kategori_Penghasilan').size().reset_index(name='Jumlah')
+
+  # Membuat pie chart dengan matplotlib
+  labels = groupedData['Kategori_Penghasilan']
+  sizes = groupedData['Jumlah']
+
+  plt.figure(figsize=(10, 10))
+  plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=140, colors=plt.cm.Paired.colors)
+  plt.title('Distribusi jumlah orang berdasarkan kategori penghasilan')
+  plt.show()
